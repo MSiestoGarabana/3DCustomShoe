@@ -11,67 +11,66 @@ function App() {
 
   return (
     <div className="App">
-      <div className="wrapper">
-        <div className="card">
-          <div className="product-canvas">
-            <Canvas>
-              <Suspense fallback={null}>
-                <ambientLight />
-                <spotLight
-                  intensity={1000}
-                  angle={2}
-                  penumbra={1}
-                  position={[10, 15, 10]}
-                  castShadow
-                />
-                <Shoe
-                  customColors={{
-                    mesh: mesh,
-                    stripes: stripes,
-                    soul: soul,
-                  }}
-                />
-                <OrbitControls
-                  enablePan={true}
-                  enableZoom={true}
-                  enableRotate={true}
-                />
-              </Suspense>
-            </Canvas>
+      <h2>Demo by Miguel Siesto</h2>
+      <div className="product-canvas">
+        <Canvas>
+          <Suspense fallback={null}>
+            <ambientLight />
+            <spotLight
+              intensity={1000}
+              angle={2}
+              penumbra={1}
+              position={[10, 15, 10]}
+              castShadow
+            />
+            <Shoe
+              customColors={{
+                mesh: mesh,
+                stripes: stripes,
+                soul: soul,
+              }}
+            />
+            <OrbitControls
+              enablePan={true}
+              enableZoom={true}
+              enableRotate={true}
+            />
+          </Suspense>
+        </Canvas>
+      </div>
+      <div className="card">
+        <h2>Color chooser</h2>
+        <div className="colors">
+          <div>
+            <input
+              type="color"
+              id="head"
+              name="head"
+              value={mesh}
+              onChange={(e) => setMesh(e.target.value)}
+            />
+            <label for="head">Main</label>
           </div>
-          <h2>Color chooser</h2>
-          <div className="colors">
-            <div>
-              <input
-                type="color"
-                id="head"
-                name="head"
-                value={mesh}
-                onChange={(e) => setMesh(e.target.value)}
-              />
-              <label for="head">Main</label>
-            </div>
 
-            <div>
-              <input
-                type="color"
-                id="body"
-                name="body"
-                value={stripes}
-                onChange={(e) => setStripes(e.target.value)}
-              />
-              <label for="body">Stripes</label>
-            </div>
-            <div>
-              <input
-                type="color"
-                id="body"
-                name="body"
-                value={soul}
-                onChange={(e) => setSoul(e.target.value)}
-              />
-              <label for="body">Soul</label>
-            </div>
+          <div>
+            <input
+              type="color"
+              id="body"
+              name="body"
+              value={stripes}
+              onChange={(e) => setStripes(e.target.value)}
+            />
+            <label for="body">Stripes</label>
+          </div>
+          <div>
+            <input
+              type="color"
+              id="body"
+              name="body"
+              value={soul}
+              onChange={(e) => setSoul(e.target.value)}
+            />
+            <label for="body">Soul</label>
           </div>
         </div>
       </div>
