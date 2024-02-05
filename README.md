@@ -1,6 +1,6 @@
 # Try it!
 
-https://3-d-custom-shoe-ai4b7i0g3-msiestogarabana.vercel.app/
+https://3-d-custom-shoe.vercel.app/
 
 # React + Vite
 
@@ -13,3 +13,7 @@ React
 Three.js
 @react-three/fiber
 @react-three/drei
+
+# About GLTF
+
+Me ha gustado mucho aprender sobre
